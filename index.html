@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Quotes generator</title>
   </head>
@@ -12,7 +13,7 @@
         <h1>AI Quotes generator</h1>
       </header>
       <main>
-        <form>
+        <form id="quote-generator-form">
           <input
             type="text"
             placeholder="Enter the topic of the quote"
@@ -23,10 +24,7 @@
           />
           <input type="submit" class="submit-button" />
         </form>
-        <div class="quote">
-          Life is really simple, <br />but we insist on making it complicated.
-          <br />Confucius
-        </div>
+        <div class="quote" id="quote"></div>
       </main>
       <footer>
         This AI project was coded by
