@@ -17,6 +17,9 @@ function generateQuote(event) {
     "you are a quote expert, you love to quote famous people and sayings. your mission is to generate a 4 lines quote in basic HTML and separate each line with a <br/>, make sure to follow the user instructions. do not wrap your response in markdown or code blocks, do not use triple backticks, only return the raw HTML with no extra formatting or labels. sign the with SheCodes AI after the quote inside the <strong> element";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+  let quoteElement = document.querySelector("#quote");
+  quoteElement.classList.remove("hidden");
+  quoteElement.innerHTML = `<div class="blink">⌛</div>Generating Quote about ${instructionsInput.value}`;
   axios.get(apiUrl).then(displayQuote);
 }
 
